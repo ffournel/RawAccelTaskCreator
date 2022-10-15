@@ -1,4 +1,4 @@
-#"if No Administrative rights at launch, it will ask user for Admin rights while keeping keeping location"
+#"if No Administrative rights at launch, it will ask user for Admin rights while keeping current location"
 If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))
 {   
 $arguments = "& '" + $myinvocation.mycommand.definition + "'"
